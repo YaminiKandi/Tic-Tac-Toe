@@ -1,38 +1,79 @@
 .App {
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  color: black;
+  font-family: 'Arial', sans-serif;
+  font-size: 25px;
+  margin: 20px;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+ol, ul {
+  padding-left: 30px;
+  list-style: none;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.board-row:after {
+  clear: both;
+  content: "";
+  display: table;
+}
+.board-row{
+  display: flex;
+  justify-content: center;
+}
+.status {
+  margin-bottom: 10px;
+}
+.square {
+  height: 100px;
+  width: 100px;
+  background: #d3d3d3;
+  border-radius: 10px;
+  border: none;
+  float: left;
+  font-size: 40px;
+  font-weight: bold;
+  line-height: 34px;
+  margin: 5px;
+  margin-right: -1px;
+  margin-top: -1px;
+  padding: 10px;
+  text-align: center;
+}
+.square-win {
+  background-color: #78bec5;
+}
+.square-x{
+  color: brown;
+}
+.square-o{
+  color: green;
+}
+.square:hover{
+  background-color: #78bec5;
+  cursor: pointer;
+}
+.square:focus {
+  outline: none;
+}
+.history-btns{
+  font-family: 'Arial', sans-serif;
+  font-size: 20px;
+  height: 35px;
+  width: 200px;
+  border-radius: 10px;
+  border-color: azure;
+}
+.history-btns:hover{
+  cursor: pointer;
+}
+.kbd-navigation .square:focus {
+  background: #ddd;
+}
+.game {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+}
+.game-info-one{
+  margin-bottom: 16px;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
