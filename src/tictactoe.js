@@ -138,11 +138,11 @@ class Game extends React.Component{
         })
         let status;
         if (winner) {
-            status = 'Winner: ' + winner;
+            status = `Player ${winner} wins!`;
         } else if (checkDraw(current.squares)) {
             status = 'It\'s a Draw!';
         }else{
-            status = 'Next Player: ' + (this.state.xIsNext ? 'X' : 'O');
+            status = 'Current turn: ' + (this.state.xIsNext ? 'X' : 'O');
         }
 
         return(
